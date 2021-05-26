@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <title>Furniture Shop</title>
+</head>
+<body>
+    <div>
+    <div id="header">
+  <div class="logo">
+    <a href="#">Furniture Shop</a>
+  </div>  
+    <nav>
+        <form class="search" action="search.php"> 
+        <input name="q" placeholder="Search..." type="search">
+        </form>
+        <ul>
+        <li>
+            <a class="nav-button">Home</a>
+        </li>
+        <li>
+            <a class="nav-button">Products</a>
+        </li>
+        <li>
+            <a class="nav-button">Blog</a>
+        </li>
+        </ul>
+    </nav>
+</div>
+        {% block content %}
+        {% endblock content %}
+    </div>
+    <script src="https://kit.fontawesome.com/b0c0ccbcfc.js" crossorigin="anonymous"></script>
+</body>
+</html>
